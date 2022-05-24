@@ -2,7 +2,7 @@
 //  GameScene.swift
 //  battle-line
 //
-//  Created by 仲川宙舞 on 2022/05/23.
+//  Created by s0ran on 2022/05/23.
 //
 
 import SpriteKit
