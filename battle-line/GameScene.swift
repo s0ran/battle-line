@@ -7,6 +7,9 @@
 
 import SpriteKit
 import GameplayKit
+import UIKit
+
+
 
 class GameScene: SKScene {
     
@@ -17,9 +20,12 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
+        let card=NumberCard(number:1,color_id:1)
+        self.addChild(card)
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode

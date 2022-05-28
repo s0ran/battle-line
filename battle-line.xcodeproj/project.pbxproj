@@ -18,6 +18,7 @@
 		C5A9D553283BD6BD002ED79C /* battle_lineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D552283BD6BD002ED79C /* battle_lineTests.swift */; };
 		C5A9D55D283BD6BD002ED79C /* battle_lineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D55C283BD6BD002ED79C /* battle_lineUITests.swift */; };
 		C5A9D55F283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D55E283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift */; };
+		C5A9D5742842120C002ED79C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D5732842120C002ED79C /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		C5A9D558283BD6BD002ED79C /* battle-lineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "battle-lineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A9D55C283BD6BD002ED79C /* battle_lineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battle_lineUITests.swift; sourceTree = "<group>"; };
 		C5A9D55E283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battle_lineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5A9D5732842120C002ED79C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C5A9D53A283BD6BC002ED79C /* GameScene.sks */,
 				C5A9D53C283BD6BC002ED79C /* Actions.sks */,
 				C5A9D53E283BD6BC002ED79C /* GameScene.swift */,
+				C5A9D5732842120C002ED79C /* Card.swift */,
 				C5A9D540283BD6BC002ED79C /* GameViewController.swift */,
 				C5A9D542283BD6BC002ED79C /* Main.storyboard */,
 				C5A9D545283BD6BD002ED79C /* Assets.xcassets */,
@@ -267,6 +270,7 @@
 				C5A9D53F283BD6BC002ED79C /* GameScene.swift in Sources */,
 				C5A9D541283BD6BC002ED79C /* GameViewController.swift in Sources */,
 				C5A9D539283BD6BC002ED79C /* AppDelegate.swift in Sources */,
+				C5A9D5742842120C002ED79C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
