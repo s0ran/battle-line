@@ -25,7 +25,8 @@ class GameScene: SKScene {
 
         self.lastUpdateTime = 0
         let card=NumberCard(number:1,color_id:1)
-        self.addChild(card)
+        let deck=NumberDeck()
+        self.addChild(deck)
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode

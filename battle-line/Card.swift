@@ -15,6 +15,7 @@ class NumberCard:SKSpriteNode{
     init(number:Int,color_id:Int){
         self.number=number
         self.color_id=color_id
+        let colors=[SKColor.red,SKColor.blue,SKColor.purple,SKColor.yellow,SKColor.orange,SKColor.green]
         super.init(texture:SKTexture(),color:.systemRed,size:CGSize(width:50, height:70))
         let background=SKShapeNode(rectOf: CGSize(width: 50, height: 70))
         background.fillColor=SKColor.red
