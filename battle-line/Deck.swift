@@ -39,3 +39,28 @@ class NumberDeck:SKSpriteNode{
         return self.nextCards.popLast()
     }
 }
+
+class StorategyDeck:SKSpriteNode{
+    var nextCards: Array<Int>
+    init(){
+        self.nextCards=[]
+        for i in 0...5{
+            self.nextCards.append(i)
+        }
+        self.nextCards.shuffle()
+        super.init(texture:SKTexture(),color:.systemRed,size:CGSize(width:50, height:70))
+        self.position=CGPoint(x:-220,y:0)
+        let cardBack=SKShapeNode(rectOf: CGSize(width: 50, height: 70))
+        cardBack.fillColor=SKColor.red
+        self.addChild(cardBack)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func next() -> Int?{
+        return self.nextCards.popLast()
+    }
+}
+
