@@ -10,7 +10,7 @@ import SpriteKit
 
 class NumberDeck:SKSpriteNode{
     var nextCards: Array<(Int,Int)>
-    init(_ cardSize:CGSize){
+    init(){
         self.nextCards=[]
         for i in 0...5{
             for j in 1...10{
@@ -18,10 +18,10 @@ class NumberDeck:SKSpriteNode{
             }
         }
         self.nextCards.shuffle()
-        super.init(texture:SKTexture(),color:.systemRed,size:cardSize)
+        super.init(texture:SKTexture(),color:.systemRed,size:cardSize!)
         self.isUserInteractionEnabled  = true
         //self.position=CGPoint(x:-200,y:0)
-        let cardBack=SKShapeNode(rectOf: cardSize)
+        let cardBack=SKShapeNode(rectOf: cardSize!)
         cardBack.fillColor=SKColor.red
         self.addChild(cardBack)
     }
@@ -31,11 +31,12 @@ class NumberDeck:SKSpriteNode{
     }
     
     func next() -> (Int,Int)?{
-        print("called")
+        //print("called")
         return self.nextCards.popLast()
     }
     func touchUp(atPoint pos : CGPoint) {
-        print(next())
+        print("touched")
+        _ = next()
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches {
@@ -47,16 +48,16 @@ class NumberDeck:SKSpriteNode{
 
 class StorategyDeck:SKSpriteNode{
     var nextCards: Array<Int>
-    init(_ cardSize:CGSize){
+    init(){
         self.nextCards=[]
         for i in 0...5{
             self.nextCards.append(i)
         }
         self.nextCards.shuffle()
-        super.init(texture:SKTexture(),color:.systemRed,size:cardSize)
+        super.init(texture:SKTexture(),color:.systemRed,size:cardSize!)
         //self.position=CGPoint(x:-220,y:0)
         self.isUserInteractionEnabled  = true
-        let cardBack=SKShapeNode(rectOf: cardSize)
+        let cardBack=SKShapeNode(rectOf: cardSize!)
         cardBack.fillColor=SKColor.red
         self.addChild(cardBack)
     }
@@ -69,7 +70,8 @@ class StorategyDeck:SKSpriteNode{
         return self.nextCards.popLast()
     }
     func touchUp(atPoint pos : CGPoint) {
-        print(next())
+        _ = next()
+        print("touched")
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for t in touches {

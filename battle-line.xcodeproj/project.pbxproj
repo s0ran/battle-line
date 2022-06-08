@@ -21,6 +21,7 @@
 		C5A9D5742842120C002ED79C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D5732842120C002ED79C /* Card.swift */; };
 		C5A9D576284217C9002ED79C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D575284217C9002ED79C /* Deck.swift */; };
 		C5A9D57A284B5EF3002ED79C /* FlagManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D579284B5EF3002ED79C /* FlagManager.swift */; };
+		C5A9D57C2850B86F002ED79C /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D57B2850B86F002ED79C /* Hand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		C5A9D5732842120C002ED79C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C5A9D575284217C9002ED79C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		C5A9D579284B5EF3002ED79C /* FlagManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagManager.swift; sourceTree = "<group>"; };
+		C5A9D57B2850B86F002ED79C /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				C5A9D547283BD6BD002ED79C /* LaunchScreen.storyboard */,
 				C5A9D575284217C9002ED79C /* Deck.swift */,
 				C5A9D579284B5EF3002ED79C /* FlagManager.swift */,
+				C5A9D57B2850B86F002ED79C /* Hand.swift */,
 			);
 			path = "battle-line";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				C5A9D541283BD6BC002ED79C /* GameViewController.swift in Sources */,
 				C5A9D576284217C9002ED79C /* Deck.swift in Sources */,
 				C5A9D539283BD6BC002ED79C /* AppDelegate.swift in Sources */,
+				C5A9D57C2850B86F002ED79C /* Hand.swift in Sources */,
 				C5A9D5742842120C002ED79C /* Card.swift in Sources */,
 				C5A9D57A284B5EF3002ED79C /* FlagManager.swift in Sources */,
 			);
