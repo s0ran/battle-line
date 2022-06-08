@@ -19,14 +19,15 @@ class GameViewController: UIViewController {
         if let scene = GKScene(fileNamed: "GameScene") {
             
             // Get the SKScene from the loaded GKScene
+            
             if let sceneNode = scene.rootNode as! GameScene? {
-                
+                sceneNode.size = view.bounds.size
                 // Copy gameplay related content over to the scene
                 sceneNode.entities = scene.entities
                 sceneNode.graphs = scene.graphs
                 
                 // Set the scale mode to scale to fit the window
-                sceneNode.scaleMode = .aspectFill
+                sceneNode.scaleMode = .fill
                 
                 // Present the scene
                 if let view = self.view as! SKView? {

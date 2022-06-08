@@ -20,6 +20,7 @@
 		C5A9D55F283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D55E283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift */; };
 		C5A9D5742842120C002ED79C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D5732842120C002ED79C /* Card.swift */; };
 		C5A9D576284217C9002ED79C /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D575284217C9002ED79C /* Deck.swift */; };
+		C5A9D57A284B5EF3002ED79C /* FlagManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A9D579284B5EF3002ED79C /* FlagManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C5A9D55E283BD6BD002ED79C /* battle_lineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = battle_lineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C5A9D5732842120C002ED79C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C5A9D575284217C9002ED79C /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		C5A9D579284B5EF3002ED79C /* FlagManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				C5A9D545283BD6BD002ED79C /* Assets.xcassets */,
 				C5A9D547283BD6BD002ED79C /* LaunchScreen.storyboard */,
 				C5A9D575284217C9002ED79C /* Deck.swift */,
+				C5A9D579284B5EF3002ED79C /* FlagManager.swift */,
 			);
 			path = "battle-line";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				C5A9D576284217C9002ED79C /* Deck.swift in Sources */,
 				C5A9D539283BD6BC002ED79C /* AppDelegate.swift in Sources */,
 				C5A9D5742842120C002ED79C /* Card.swift in Sources */,
+				C5A9D57A284B5EF3002ED79C /* FlagManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +321,8 @@
 				C5A9D543283BD6BC002ED79C /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = "/Users/s0ran/Desktop/Projects/battle-line/battle-line";
+			sourceTree = "<absolute>";
 		};
 		C5A9D547283BD6BD002ED79C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -459,9 +464,10 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,9 +494,10 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

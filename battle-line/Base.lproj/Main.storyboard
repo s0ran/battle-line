@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hEJ-u7-XdF">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="ipad7_9" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,14 +11,18 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="battle_line" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="battle_line" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1133" height="744"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="Yb0-Dc-SYC"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" adjustable="YES"/>
+                        </accessibility>
                     </view>
-                    <navigationItem key="navigationItem" id="efH-SW-cHu"/>
+                    <navigationItem key="navigationItem" id="lJd-Gl-l03"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="1024" height="757"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -28,12 +32,12 @@
         <scene sceneID="DKa-32-G4a">
             <objects>
                 <viewController id="hEJ-u7-XdF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="are-TX-xDH">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                    <view key="view" contentMode="scaleToFill" id="are-TX-xDH" customClass="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="1133" height="744"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-Or-G4r">
-                                <rect key="frame" x="300" y="271.5" width="96" height="31"/>
+                                <rect key="frame" x="418.5" y="436.5" width="96" height="31"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="一人で遊ぶ"/>
@@ -41,20 +45,20 @@
                                     <color key="backgroundColor" systemColor="labelColor"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="e2F-Ba-m3W"/>
+                                    <segue destination="BV1-FR-VrT" kind="presentation" modalPresentationStyle="fullScreen" id="KbJ-4n-nz2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-Tv-gMr">
-                                <rect key="frame" x="514.5" y="271.5" width="67" height="31"/>
+                                <rect key="frame" x="633" y="436.5" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="準備中"/>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="RIr-bF-Gpj"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="odh-rm-qwV"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
-                            <constraint firstItem="WPU-Or-G4r" firstAttribute="centerX" secondItem="are-TX-xDH" secondAttribute="centerX" constant="-100" id="EOa-Ug-kyO"/>
-                            <constraint firstItem="kHe-Tv-gMr" firstAttribute="centerX" secondItem="are-TX-xDH" secondAttribute="centerX" constant="100" id="K9p-VN-gJA"/>
+                            <constraint firstItem="WPU-Or-G4r" firstAttribute="centerX" secondItem="odh-rm-qwV" secondAttribute="centerX" constant="-100" id="EOa-Ug-kyO"/>
+                            <constraint firstItem="kHe-Tv-gMr" firstAttribute="centerX" secondItem="odh-rm-qwV" secondAttribute="centerX" constant="100" id="K9p-VN-gJA"/>
                             <constraint firstItem="WPU-Or-G4r" firstAttribute="centerY" secondItem="are-TX-xDH" secondAttribute="centerY" constant="80" id="kQg-ru-2tT"/>
                             <constraint firstItem="kHe-Tv-gMr" firstAttribute="centerY" secondItem="are-TX-xDH" secondAttribute="centerY" constant="80" id="rwl-2T-SeX"/>
                         </constraints>
@@ -62,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebQ-5g-Pub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1268" y="87"/>
+            <point key="canvasLocation" x="-1268.0494263018534" y="86.290322580645167"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemRedColor"/>
@@ -70,8 +74,11 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

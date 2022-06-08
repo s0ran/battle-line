@@ -9,6 +9,12 @@ import SpriteKit
 import GameplayKit
 import UIKit
 
+func + (left: CGPoint, right: CGPoint) -> CGPoint {
+    return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
+
+var sceneSize:CGSize?
 
 
 class GameScene: SKScene {
@@ -18,15 +24,46 @@ class GameScene: SKScene {
     
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
+    private var deckfield : SKNode?
+    private var flagfield : SKNode?
+    private var myfield : SKNode?
+    private var enemyfield : SKNode?
+    
     private var spinnyNode : SKShapeNode?
     
     
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
-        let card=NumberCard(number:1,color_id:1)
-        let deck=NumberDeck()
-        self.addChild(deck)
+        print("GameScene",self.size)
+        sceneSize=self.size
+        
+        self.deckfield=self.childNode(withName: "//deckfield") as SKNode?
+        
+        
+        if let deckfield=self.deckfield{
+            print("deckfield", deckfield.frame)
+            print(deckfield.position)
+            let deckpos=CGPoint(x:-self.size.width/2,y:self.size.height/2)
+            deckfield.position=deckpos
+            print(deckfield.position)
+            let cardSize=CGSize(width:self.size.height*2/25, height:self.size.height*3/25)
+            let deck=NumberDeck(cardSize)
+            print("deck",deck.size)
+            let storategydeck=StorategyDeck(cardSize)
+            deck.position=CGPoint(x:60,y:-90)
+            storategydeck.position=CGPoint(x:120,y:-90)
+            deckfield.addChild(deck)
+            deckfield.addChild(storategydeck)
+        }
+        
+        self.flagfield=self.childNode(withName: "//flagfield") as SKNode?
+        if let flagfield=self.flagfield{
+            let flagmanager=FlagManager.create()
+            flagfield.addChild(flagmanager)
+        }
+        
+        
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
@@ -37,20 +74,20 @@ class GameScene: SKScene {
         
         // Create shape node to use during mouse interaction
         let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+        //self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
         
-        if let spinnyNode = self.spinnyNode {
+        /*if let spinnyNode = self.spinnyNode {
             spinnyNode.lineWidth = 2.5
             
             spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(Double.pi), duration: 1)))
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
-        }
+        }*/
     }
     
     
-    func touchDown(atPoint pos : CGPoint) {
+    /*func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
             n.position = pos
             n.strokeColor = SKColor.green
@@ -112,5 +149,5 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
-    }
+    }*/
 }
